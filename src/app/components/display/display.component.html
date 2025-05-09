@@ -1,0 +1,31 @@
+<div style="display: flex; flex-direction: row; gap: 24px;">
+  <mat-form-field appearance="fill">
+    <mat-label>Title container Input</mat-label>
+    <input
+      matInput
+      type="text"
+      [value]="titleContainer"
+      (input)="onTitleContainerInput($event)"
+    />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Title Input</mat-label>
+    <input
+      matInput
+      type="text"
+      [value]="title"
+      (input)="onTitleInput($event)"
+    />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Subtitle Input</mat-label>
+    <input
+      matInput
+      type="text"
+      [value]="subtitle"
+      (input)="onSubtitleInput($event)"
+    />
+  </mat-form-field>
+</div>

@@ -1,0 +1,170 @@
+@use "@angular/material" as mat;
+
+.card-container {
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+}
+::ng-deep .mat-card {
+  padding: 16px 24px !important;
+  width: 214px;
+  height: 81px;
+  box-sizing: border-box;
+  display: flex !important;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Work Sans", sans-serif;
+  cursor: pointer;
+  box-shadow: 0px 1px 3px 0px #00000033, 0px 2px 1px 0px #0000001f,
+    0px 1px 1px 0px #00000024 !important;
+  border-radius: 4px !important;
+  border: 2px solid transparent;
+
+  &.blue {
+    background-color: #2e5da4;
+
+    transition: background-color 0.2s ease;
+
+    &.active {
+      border: 2px solid #ffffff;
+      background-color: rgba(46, 93, 164, 0.88);
+    }
+
+    &:hover {
+      background-color: rgba(46, 93, 164, 0.96);
+    }
+  }
+
+  &.green {
+    background-color: #008542;
+    &.active {
+      border: 2px solid #ffffff;
+      background-color: rgba(0, 133, 66, 0.88);
+    }
+
+    &:hover {
+      background-color: rgba(0, 133, 66, 0.96);
+    }
+  }
+
+  &.sunset {
+    background-color: #ffa000;
+    &.active {
+      border: 2px solid #ffffff;
+      background-color: rgba(255, 160, 0, 0.88);
+    }
+
+    &:hover {
+      background-color: rgba(255, 160, 0, 0.96);
+    }
+  }
+
+  &.red {
+    background-color: #d62839;
+    &.active {
+      border: 2px solid #ffffff;
+      background-color: rgba(214, 40, 57, 0.88);
+    }
+
+    &:hover {
+      background-color: rgba(214, 40, 57, 0.96);
+    }
+  }
+
+  &.orange-sys {
+    background-color: #ff7700;
+    &.active {
+      border: 2px solid #ffffff;
+      background-color: rgba(255, 119, 0, 0.88);
+    }
+    :hover {
+      background-color: rgba(255, 119, 0, 0.96);
+    }
+  }
+
+  &.disabled {
+    background-color: #757575;
+    cursor: not-allowed;
+  }
+
+  .left-side {
+    .mat-card-title {
+      font-size: 16px;
+      line-height: 120%;
+      font-weight: 600;
+      color: #ffffff;
+      margin-bottom: 8px;
+    }
+    .mat-card-content {
+      width: 100%;
+      font-size: 12px;
+      line-height: 120%;
+      font-weight: 400;
+      color: #ffffff;
+      margin-bottom: 0;
+    }
+  }
+
+  .mat-icon {
+    position: absolute;
+    bottom: -12px;
+    right: 0;
+    color: white;
+    opacity: 0.2;
+    font-size: 56px;
+    width: auto;
+    height: auto;
+  }
+
+  .mat-card-subtitle {
+    font-size: 34px;
+    line-height: 120%;
+    font-weight: 500;
+    color: #ffffff;
+    margin-bottom: 0;
+  }
+}
+
+.card-content {
+  padding: 16px 24px;
+  width: 589px;
+  height: 296px;
+  box-sizing: border-box;
+  font-family: "Work Sans", sans-serif;
+  border-radius: 4px;
+  box-shadow: 0px 1px 3px 0px #00000033, 0px 2px 1px 0px #0000001f,
+    0px 1px 1px 0px #00000024;
+  position: relative;
+  overflow: hidden;
+  .title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 120%;
+    color: #142832;
+    margin-bottom: 16px;
+    .close-icon {
+      font-size: 24px;
+      cursor: pointer;
+    }
+  }
+  .content {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+  }
+  .file-copy-icon {
+    font-size: 56px;
+    color: #506482;
+    position: absolute;
+    width: 56px;
+    height: 56px;
+    right: 0;
+    bottom: -8px;
+    opacity: 0.2;
+  }
+}

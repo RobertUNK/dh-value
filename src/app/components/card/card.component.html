@@ -1,0 +1,44 @@
+<div class="card-container">
+  <mat-card
+    matRipple
+    [ngClass]="[
+      card.color,
+      card.disabled ? 'disabled' : '',
+      isCardContentActive ? 'active' : ''
+    ]"
+    (click)="setCardContentState()"
+  >
+    <div class="left-side">
+      <mat-card-title>
+        {{ card.title }}
+      </mat-card-title>
+      <mat-card-content> {{ card.subtitle }} </mat-card-content>
+    </div>
+    <mat-card-subtitle>{{ card.number }}</mat-card-subtitle>
+    <mat-icon>{{ card.iconName }}</mat-icon>
+  </mat-card>
+
+  <div class="card-content" *ngIf="isCardContentActive">
+    <div class="title">
+      {{ card.titleContainer }}
+      <mat-icon class="close-icon" (click)="closeCardContent()">close</mat-icon>
+    </div>
+    <div class="content">
+      Please detach component and add the content that you need. The icon from
+      the bottom should be the same with the icon from cluster card that is
+      active
+      <br /><br />
+      Please detach component and add the content that you need. The icon from
+      the bottom should be the same with the icon from cluster card that is
+      active
+      <br /><br /><br />
+      Please detach component and add the content that you need. The icon from
+      the bottom should be the same with the icon from cluster card that is
+      active Please detach component and add the content that you need. The icon
+      from the bottom should be the same with the icon from cluster card that is
+      active Please detach component and add the content that you need.
+    </div>
+
+    <mat-icon class="file-copy-icon">file_copy</mat-icon>
+  </div>
+</div>
